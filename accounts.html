@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+	* { overflow-x: hidden; }
+	body { margin: 0; padding: 0; font-family: "Poppins", serif; }
+	#loader { display: flex; justify-content: center; height: 80vh; align-items: center; }
+	.loader {
+		width: fit-content;
+		font-weight: bold;
+		font-family: monospace;
+		font-size: 30px;
+		background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;
+		animation: l24 1s infinite alternate linear;
+	}
+	.loader::before {
+		content: "Loading...";
+		line-height: 1.4em;
+		color: #0000;
+		background: inherit;
+		background-image: radial-gradient(circle closest-side,#fff 94%,#000);
+		-webkit-background-clip:text;
+		background-clip:text
+	}
+	@keyframes l24{
+		100%{background-position: left}
+	}
+	.header { display: flex; align-items: center; padding: 10px; font-family: "Henny Penny", serif; border-bottom: 1px solid #939393; }
+	.header h2 { margin: 0px 0px 0px 10px; }
+	.header img { width: 40px; height: 40px; border-radius: 125px; }
+	#data-container img { width: 350px; border-radius: 12px; max-width: 140px; height: 110px; }
+	#data-container h2 { margin: 0px 10px; font-size: 20px; font-weight: 400; }
+	#data-container { display: flex; flex-direction: column; align-items: start; }
+	.item { display: flex; flex-direction: row-reverse; margin: 15px; }
+</style>
+<div class="header">
+	<img src="https://i.ibb.co/3FjZbNR/icon.jpg">
+	<h2>Mr. FF Store</h2>
+</div>
+<div id="data-container"></div>
+<div id="loader" style="display: none;">
+<div class="loader"></div>
+</div>
+<script src="accounts.js"></script>
